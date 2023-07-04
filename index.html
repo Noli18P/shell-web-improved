@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse Shell's</title>
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>Reverse Shell's</h1>
+                <p>Enter your IP, port and select the language to
+                    get your reverse shell.
+                </p>
+                <div>
+                    <form>
+                        <div class="input-group mb-2">
+                            <span class="input-group-text" id="basic-addon1">IP</span>
+                            <input type="text" class="form-control" placeholder="IP Address" aria-label="IP Address" aria-describedby="basic-addon1" id="ip-input">
+                        </div>
+                        <div class="input-group mb-2">
+                            <span class="input-group-text" id="basic-addon1">Port</span>
+                            <input type="number" class="form-control" placeholder="Port Number" aria-label="port number" aria-describedby="basic-addon1" id="port-input">
+                        </div>
+
+                        <select name="form-select" id="select-values" class="form-select">
+                            <option value="option1">Bash</option>
+                            <option value="option2">Perl</option>
+                            <option value="option3">Python</option>
+                            <option value="option3">Ruby</option>
+                            <option value="option4">PHP</option>
+                            <option value="option5">Netcat</option>
+                        </select>
+                            <br>
+                            <input type="button" value="Get!" class="btn btn-primary" onclick="getShell()">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="text-center">
+                    <h2>Your payload must be here: </h2>
+                    <div class="alert alert-primary" role="alert">
+                        <p id="result-element">Your payload must be here</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="text-center">
+                By NRX <br>
+                I don't take any responsability for the bad usage of this.
+            </div>
+        </div>
+    </div>
+
+    <!--Javascript bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>
